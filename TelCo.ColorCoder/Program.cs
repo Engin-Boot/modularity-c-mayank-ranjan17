@@ -10,6 +10,7 @@ namespace TelCo.ColorCoder
         {
             int pairNumber = 4;
             DrivingProgram dp = new DrivingProgram();
+            
             ColorPair testPair1 = dp.GetColorFromPairNumber(pairNumber);
             Console.WriteLine("[In]Pair Number: {0},[Out] Colors: {1}\n", pairNumber, testPair1);
             Debug.Assert(testPair1.majorColor == Color.White);
@@ -36,6 +37,11 @@ namespace TelCo.ColorCoder
             pairNumber = testPair2.GetPairNumberFromColor(testPair2);
             Console.WriteLine("[In]Colors: {0}, [Out] PairNumber: {1}", testPair2, pairNumber);
             Debug.Assert(pairNumber == 6);
+
+            DrivingProgram dp1 = new DrivingProgram();
+            //The reference manual
+            Console.WriteLine("\n");
+            Console.WriteLine(dp1);
         }
     }
 }
